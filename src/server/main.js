@@ -29,7 +29,7 @@ app.post('/send-email', (req, res) => {
         service: 'gmail',
         auth: {
             user: 'kumars.kartik@gmail.com',
-            pass: process.env.pass
+            pass: 'gxoo qmpt ammw spbb'
         }
     });
 
@@ -53,7 +53,7 @@ app.post('/send-email', (req, res) => {
     });
 });
 
-
-ViteExpress.listen(app, 3000, () =>
+const port = process.env.PORT || 8080
+ViteExpress.listen(app, port, () =>
   console.log("Server is listening on port 3000..."),
 );
