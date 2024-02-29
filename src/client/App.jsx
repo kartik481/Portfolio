@@ -1,24 +1,26 @@
-import { useState } from 'react'
-import './App.css'
+import React from 'react';
+import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './Navbar';
 import Banner from './MainHead';
 import Skills from './Skills';
 import Projects from './Projects';
 import Footer from './footer';
-import ConatctForm from './Contact';
+import ContactForm from './Contact';
+
 
 function App() {
+
   return (
     <>
       <Navbar/>
       <Banner/>
       <Skills/>
       <Projects/>
-      <ConatctForm/>
+      <ContactForm/>
       <Footer/>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

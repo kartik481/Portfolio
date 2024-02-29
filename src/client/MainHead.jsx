@@ -1,12 +1,6 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import headerImg from "./assets/img/header-img.svg";
-import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
-import logo from "./assets/icons8-logo-100.png";
-import navIcon1 from './assets/github-mark-white.png';
-import navIcon2 from './assets/reshot-icon-twitter-4EAXDHGYM5.svg';
-import navIcon3 from './assets/iconmonstr-linkedin-3.svg';
 import TrackVisibility from 'react-on-screen';
 
 export default function Banner(){
@@ -55,31 +49,19 @@ export default function Banner(){
     <section className="banner" id="home">
       <Container>
         <Row className="aligh-items-center">
-          <Col xs={12} md={6} xl={7}>
+          <Col xs={12} md={12} xl={12}>
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <span className="tagline">Welcome to my Portfolio</span>
-                <h1>{`Hi! I'm Kartik`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Researcher"]'><span className="wrap">{text}</span></span></h1>
+                <h1>{`Hi! I'm Kartik`} <span className="txt-rotate" dataPeriod="2000" data-rotate='[ "Web Developer", "Researcher"]'><span className="wrap">{text}</span></span></h1>
                   <p>.</p>
-                  {/* <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button> */}
-                <div className="social-icon">
-                <a href="https://github.com/kartik481"><img src={navIcon1} alt="github" /></a>
-                <a href="https://twitter.com/kartikk__"><img src={navIcon2} alt="" /></a>
-                <a href="https://www.linkedin.com/in/kartik-kk/"><img src={navIcon3} alt="" /></a>
-              </div>
               </div>}
             </TrackVisibility>
-          </Col>
-          <Col xs={12} md={6} xl={5}>
-            <TrackVisibility>
-              {({ isVisible }) =>
-                <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
-                 
-                </div>}
-            </TrackVisibility>
+
           </Col>
         </Row>
+        
       </Container>
     </section>
   )
