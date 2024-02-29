@@ -8,7 +8,6 @@ import express from "express";
 import ViteExpress from "vite-express";
 import nodemailer from 'nodemailer';
 import bodyParser from 'body-parser';
-import session from 'express-session';
 import helmet from "helmet";
 const app = express();
 
@@ -17,11 +16,6 @@ app.use(helmet());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.use(session({
-    secret: process.env.Secret,
-    resave: true,
-    saveUninitialized: true
-  }));
 
   const scriptSrcUrls = [
     "https://stackpath.bootstrapcdn.com",
