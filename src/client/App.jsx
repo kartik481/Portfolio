@@ -8,15 +8,21 @@ import Projects from './Projects';
 import Footer from './footer';
 import ContactForm from './Contact';
 import { useEffect } from 'react';
-import ReactGA from 'react-ga';
+import ReactGA from "react-ga4";
 
 
 
 
 function App() {
   useEffect(()=>{
-    ReactGA.initialize('G-D116MV7TGH');
-    ReactGA.pageview(window.location.pathname + window.location.search);
+    ReactGA.initialize([
+      {
+        trackingId: "G-D116MV7TGH",
+      }
+    ]);
+    
+    // Send pageview with a custom path
+    ReactGA.send({ hitType: "pageview", page: "/my-path", title: "Custom Title" });
   },[])
   return (
     <>
