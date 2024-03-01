@@ -20,7 +20,7 @@ function App() {
         trackingId: "G-D116MV7TGH",
       }
     ]);
-    ReactGA.pageview(window.location.pathname + window.location.search);
+    ReactGA.send({ hitType: "pageview", page: window.location.pathname + window.location.search, title: "Custom Title" });
     
     },[])
   return (

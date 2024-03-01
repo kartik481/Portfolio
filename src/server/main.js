@@ -37,7 +37,8 @@ const styleSrcUrls = [
 const connectSrcUrls = [
     "https://api.mapbox.com",
     "https://*.tiles.mapbox.com",
-    "https://events.mapbox.com"
+    "https://events.mapbox.com",
+    "https://www.googletagmanager.com/"
 ];
 const fontSrcUrls = [];
 app.use(
@@ -45,7 +46,7 @@ app.use(
         directives: {
             defaultSrc: [],
             connectSrc: ["'self'", ...connectSrcUrls],
-            scriptSrc: ["'unsafe-inline'", "'self'", ...scriptSrcUrls],
+            scriptSrc: ["'unsafe-inline'", "'self'", ...scriptSrcUrls, 'https://www.googletagmanager.com'],
             styleSrc: ["'self'", "'unsafe-inline'", ...styleSrcUrls],
             workerSrc: ["'self'", "blob:"],
             childSrc: ["blob:"],
