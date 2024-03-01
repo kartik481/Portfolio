@@ -7,6 +7,8 @@ import Skills from './Skills';
 import Projects from './Projects';
 import Footer from './footer';
 import ContactForm from './Contact';
+import { exportGoogleTagManagerScript } from './GoogleAnalytics';
+exportGoogleTagManagerScript('G-D116MV7TGH');
 
 
 function App() {

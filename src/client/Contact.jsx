@@ -3,13 +3,14 @@ import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { initializeFormValidation } from './ValidateFroms';
-initializeFormValidation();
+
 
 
 function ContactForm() {
-    
+  initializeFormValidation();
   const notifyError = () => toast.error("Error sending the message!");
   const notifySuccess = () => toast.success("Message sent successfully!");
+  const notifyMessage = () => toast.error("Please enter your details!");
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -25,6 +26,11 @@ function ContactForm() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        if (!formData.name || !formData.email || !formData.description) {
+            notifyMessage();
+            console.error('Error sending email:', error);
+        }
+        else{
         try {
             const response = await axios.post('/send-email', formData);
             notifySuccess();
@@ -37,6 +43,7 @@ function ContactForm() {
             notifyError();
             console.error('Error sending email:', error);
         }
+    }
     };
 
     return (
