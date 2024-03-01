@@ -20,10 +20,9 @@ function App() {
         trackingId: "G-D116MV7TGH",
       }
     ]);
+    ReactGA.pageview(window.location.pathname + window.location.search);
     
-    // Send pageview with a custom path
-    ReactGA.send({ hitType: "pageview", page: "/my-path", title: "Custom Title" });
-  },[])
+    },[])
   return (
     <>
       <Navbar/>
