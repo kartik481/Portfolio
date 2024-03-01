@@ -38,7 +38,8 @@ const connectSrcUrls = [
     "https://api.mapbox.com",
     "https://*.tiles.mapbox.com",
     "https://events.mapbox.com",
-    "https://www.googletagmanager.com/"
+    "https://www.googletagmanager.com/",
+    "https://region1.google-analytics.com"
 ];
 const fontSrcUrls = [];
 app.use(
