@@ -34,7 +34,6 @@ export default function Skills() {
           <div className="col-12">
             <div className="skill-bx wow zoomIn">
               <h2>Skills</h2>
-              {/* <p>I specialize in MERN Stack</p> */}
               <Carousel
                 responsive={responsive}
                 infinite={true}

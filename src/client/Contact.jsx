@@ -47,9 +47,10 @@ function ContactForm() {
     };
 
     return (
-        <div className="contact mt-auto">
+        <section className='contact' id='contact'>
+        <div className="container mt-auto">
             <div className="row">
-                <h1 className="text-center">Contact me!!</h1>
+                <h1 className="text-center">Contact me!!!</h1>
                 <div className="col-6 offset-3 mt-3">
                     <form onSubmit={handleSubmit} className="needs-validation" noValidate encType="multipart/form-data">
                         <div className="mb-3">
@@ -125,6 +126,7 @@ function ContactForm() {
                 </div>
             </div>
         </div>
+        </section>
     );
 }
 

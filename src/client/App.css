@@ -334,8 +334,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .card:hover {
-  background: linear-gradient(to bottom right, #e66b4c, #e4a26d);
+  background: linear-gradient(to bottom right, #ae4e31, #b37d4f);
 }
+
 
 .project h2 {
   font-size: 45px;
